@@ -4,16 +4,16 @@ public class AfterThird implements ListConverter {
 
     @Override
     public String listToString(List<String> list) {
-        String palaute = "";
+        StringBuilder palaute = new StringBuilder();
         String[] array = list.toArray(new String[list.size()]);
 
         for (int i = 0; i < array.length; i++) {
-            palaute += array[i];
+            palaute.append(array[i]);
             if ((i + 1) % 3 == 0) {
-                palaute += "\n";
+                palaute.append("\n");
             }
         }
 
-        return palaute;
+        return palaute.toString();
     }
 }

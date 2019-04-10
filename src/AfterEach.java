@@ -5,11 +5,12 @@ public class AfterEach implements ListConverter {
 
     @Override
     public String listToString(List list) {
-        String palaute = "";
+        StringBuilder palaute = new StringBuilder();
         Iterator itr = list.iterator();
         while (itr.hasNext()) {
-            palaute += itr.next() + "\n";
+            palaute.append(itr.next());
+            palaute.append("\n");
         }
-        return palaute;
+        return palaute.toString();
     }
 }
