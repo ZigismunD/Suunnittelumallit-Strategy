@@ -8,7 +8,7 @@ public class AfterThird implements ListConverter {
         String[] array = list.toArray(new String[list.size()]);
 
         for (int i = 0; i < array.length; i++) {
-            palaute += list.get(i);
+            palaute += array[i];
             if ((i + 1) % 3 == 0) {
                 palaute += "\n";
             }
